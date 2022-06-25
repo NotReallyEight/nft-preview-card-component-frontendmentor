@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+  --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --cyan: hsl(178, 100%, 50%);
+  background-color: var(--very-dark-blue-main-bg);
+  font-family: "Outfit", sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+  background-color: var(--very-dark-blue-card-bg);
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #161616;
+}
+
+.card__image {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.card__image-container {
+  margin-bottom: 5px;
+  transition-duration: 250ms;
+  border-radius: 10px;
+}
+
+.card__image-container:hover {
+  background: url("/images/icon-view.svg") no-repeat center center var(--cyan);
+}
+
+.card__image-container:hover > .card__image {
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.card__title {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 24px;
+  margin: 5px 0;
+  transition-duration: 250ms;
+}
+
+.card__title:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.card__description {
+  color: var(--soft-blue);
+  font-weight: 300;
+  margin: 5px 0;
+}
+
+.card__details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card__details .price {
+  color: var(--cyan);
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+
+.card__details .time-left {
+  color: var(--soft-blue);
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: right;
+}
+
+.price__description {
+  padding-left: 5px;
+}
+
+.time-left__description {
+  padding-left: 5px;
+}
+
+.card__separator {
+  margin: 15px 0;
+  border: solid 1px var(--very-dark-blue-line);
+}
+
+.card__attribution {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 300;
+}
+
+.attribution__icon {
+  margin-right: 20px;
+  border-radius: 50px;
+  border: solid 2px var(--white);
+}
+
+.attribution__description {
+  color: var(--soft-blue);
+}
+
+.attribution__description--special {
+  color: var(--white);
+  transition-duration: 250ms;
+}
+
+.attribution__description--special:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+@media screen and (max-width: 700px) {
+  .card {
+    width: 90%;
+  }
+}
