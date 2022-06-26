@@ -9,6 +9,22 @@
   --cyan: hsl(178, 100%, 50%);
   background-color: var(--very-dark-blue-main-bg);
   font-family: "Outfit", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+footer {
+  min-height: 10vh;
 }
 
 .card {
@@ -17,7 +33,6 @@
   width: 20%;
   margin: auto;
   background-color: var(--very-dark-blue-card-bg);
-  font-size: 18px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 30px #161616;
@@ -47,8 +62,8 @@
 .card__title {
   color: var(--white);
   font-weight: 600;
-  font-size: 24px;
   margin: 5px 0;
+  font-size: 1.5rem;
   transition-duration: 250ms;
 }
 
